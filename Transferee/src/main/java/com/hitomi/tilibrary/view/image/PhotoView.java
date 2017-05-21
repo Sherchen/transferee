@@ -48,6 +48,7 @@ public class PhotoView extends ImageView {
 
     private boolean hasMultiTouch;
     private boolean hasDrawable;
+    //尺寸已经被计算过(onSizeChanged)
     private boolean isKnowSize;
     private boolean hasOverTranslate;
     private boolean isEnable = false;
@@ -75,6 +76,7 @@ public class PhotoView extends ImageView {
     private RectF mTmpRect = new RectF();
     private RectF mCommonRect = new RectF();
 
+    //控件中心点
     private PointF mScreenCenter = new PointF();
     private PointF mScaleCenter = new PointF();
     private PointF mRotateCenter = new PointF();
@@ -293,6 +295,7 @@ public class PhotoView extends ImageView {
         mBaseMatrix.reset();
         mBaseMatrix.postTranslate(tx, ty);
         mBaseMatrix.postScale(scale, scale, mScreenCenter.x, mScreenCenter.y);
+        //matrix to rect
         mBaseMatrix.mapRect(mBaseRect);
 
         mHalfBaseRectWidth = mBaseRect.width() / 2;

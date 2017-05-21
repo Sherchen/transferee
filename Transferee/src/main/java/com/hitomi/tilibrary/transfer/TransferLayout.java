@@ -223,7 +223,9 @@ class TransferLayout extends FrameLayout {
         createTransferViewPager();
 
         int nowThumbnailIndex = transConfig.getNowThumbnailIndex();
+        //获取TransferState
         TransferState transferState = getTransferState(nowThumbnailIndex);
+//        获取小图到大图的动画
         transImage = transferState.createTransferIn(nowThumbnailIndex);
     }
 

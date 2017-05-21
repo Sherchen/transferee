@@ -80,6 +80,7 @@ public class TransferConfig {
         this.duration = duration;
     }
 
+    //只加载当前显示的图片
     public boolean isJustLoadHitImage() {
         return justLoadHitImage;
     }
@@ -88,6 +89,7 @@ public class TransferConfig {
         this.justLoadHitImage = justLoadHitImage;
     }
 
+    //缺少缩略图时使用的占位图
     public Drawable getMissDrawable(Context context) {
         if (missDrawable == null && missPlaceHolder != 0)
             return context.getResources().getDrawable(missPlaceHolder);
@@ -185,8 +187,11 @@ public class TransferConfig {
         private Drawable missDrawable;
         private Drawable errorDrawable;
 
+        //原始控件集合
         private List<ImageView> originImageList;
+        //原始图片集合
         private List<String> sourceImageList;
+        //缩略图片集合
         private List<String> thumbnailImageList;
 
         private IProgressIndicator progressIndicator;

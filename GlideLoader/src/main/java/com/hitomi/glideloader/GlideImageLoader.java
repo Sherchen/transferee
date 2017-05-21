@@ -64,6 +64,7 @@ public class GlideImageLoader implements ImageLoader {
 
                     @Override
                     protected void onDelivered(int status) {
+//                        显示结束过程
                         if (status == STATUS_DISPLAY_SUCCESS)
                             cacheLoadedImageUrl(srcUrl);
                         sourceCallback.onDelivered(status);

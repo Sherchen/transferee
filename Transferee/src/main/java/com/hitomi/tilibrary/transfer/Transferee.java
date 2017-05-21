@@ -192,6 +192,7 @@ public class Transferee implements DialogInterface.OnShowListener,
         imageLoader.clearCache();
     }
 
+    //调用dialog.show()之后进入到这里
     @Override
     public void onShow(DialogInterface dialog) {
         transLayout.show();

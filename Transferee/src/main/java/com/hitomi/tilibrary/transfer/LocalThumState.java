@@ -33,6 +33,7 @@ class LocalThumState extends TransferState {
 
             @Override
             public void onFinish(Drawable drawable) {
+//              先显示缩略图
                 transImage.setImageDrawable(drawable == null
                         ? config.getMissDrawable(context) : drawable);
 

@@ -67,6 +67,7 @@ public class GlideNoThumActivity extends BaseActivity {
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    //点击显示或者隐藏
                     TransferConfig config = TransferConfig.build()
                             .setNowThumbnailIndex(position)
                             .setSourceImageList(sourceImageList)
