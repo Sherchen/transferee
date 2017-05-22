@@ -3,6 +3,7 @@ package com.hitomi.glideloader;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -85,18 +86,22 @@ public class GlideImageLoader implements ImageLoader {
 
                     @Override
                     protected void onStartDownload() {
+                        Log.v("sherchen", "onStartDownload");
                     }
 
                     @Override
                     protected void onDownloading(long bytesRead, long expectedLength) {
+                        Log.v("sherchen", "onDownloading");
                     }
 
                     @Override
                     protected void onDownloaded() {
+                        Log.v("sherchen", "onDownloaded");
                     }
 
                     @Override
                     protected void onDelivered(int status) {
+                        Log.v("sherchen", "onDelivered");
                     }
 
                     @Override

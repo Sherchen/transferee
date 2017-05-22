@@ -28,6 +28,7 @@ import android.view.animation.AccelerateDecelerateInterpolator;
  * </ul>
  * email: 196425254@qq.com
  */
+//sherchen 这里执行动画效果。
 public class TransferImage extends PhotoView {
 
     public static final int STATE_TRANS_NORMAL = 0; // 普通状态

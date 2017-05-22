@@ -72,6 +72,7 @@ public class GlideNoThumActivity extends BaseActivity {
                             .setNowThumbnailIndex(position)
                             .setSourceImageList(sourceImageList)
                             .setMissPlaceHolder(R.mipmap.ic_empty_photo)
+                            .setJustLoadHitImage(true)
                             .setOriginImageList(wrapOriginImageViewList(sourceImageList.size()))
                             .setProgressIndicator(new ProgressPieIndicator())
                             .setImageLoader(GlideImageLoader.with(getApplicationContext()))

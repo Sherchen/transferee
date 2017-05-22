@@ -33,9 +33,10 @@ class LocalThumState extends TransferState {
 
             @Override
             public void onFinish(Drawable drawable) {
-//              先显示缩略图
-                transImage.setImageDrawable(drawable == null
-                        ? config.getMissDrawable(context) : drawable);
+//                sherchen, 因为一开始这里ViewPager.setVisibility = View.INVISIBLE,所以这里不会被调用
+                Drawable drawable1 = drawable == null
+                        ? config.getMissDrawable(context) : drawable;
+                transImage.setImageDrawable(drawable1);
 
             }
         });
